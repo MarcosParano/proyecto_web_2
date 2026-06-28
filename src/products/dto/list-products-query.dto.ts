@@ -1,12 +1,5 @@
-
 import { Type } from 'class-transformer';
-import {
-  IsEnum,
-  IsMongoId,
-  IsNumber,
-  IsOptional,
-  Min,
-} from 'class-validator';
+import { IsEnum, IsMongoId, IsNumber, IsOptional, Min } from 'class-validator';
 import { PaymentOption } from '../constants/payment-option.enum';
 import { ProductCategory } from '../constants/product-category.enum';
 

@@ -41,6 +41,7 @@ export class CreateProductDto {
 
   @IsOptional()
   @IsArray()
+  @IsString({ each: true })
   @ArrayMaxSize(5)
   @Matches(/^(data:image\/[a-zA-Z0-9.+-]+;base64,)?[A-Za-z0-9+/]+=*$/, {
     each: true,

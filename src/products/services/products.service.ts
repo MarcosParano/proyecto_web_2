@@ -12,7 +12,7 @@ import { ListProductsQueryDto } from '../dto/list-products-query.dto';
 import { ProductResponseDto } from '../dto/product-response.dto';
 import type { IProductsRepository } from '../repositories/products.repository';
 import { Product } from '../schemas/product.schema';
-import { PublicProductOwnerDto, PublicProductResponseDto } from '../dto/public-product-responde.dto';
+import { PublicProductOwnerDto, PublicProductResponseDto } from '../dto/public-product-response.dto';
 import { Types } from 'mongoose';
 import { UpdateProductDto } from '../dto/update-product.dto';
 
