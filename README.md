@@ -143,9 +143,3 @@ GET /public/products?paymentOption=mercado_pago
 GET /public/products?ownerId=6a2320b421953f49f18305ae
 GET /public/products?minPrice=10&maxPrice=30
 ```
-
-## Documentacion del repo
-
-- `clase-4-pasos.md`: de CRUD a auth con JWT
-- `clase-5-pasos.md`: de auth a marketplace con products
-- `clase-arquitectura-users-auth.md`: explicacion de arquitectura y auth
