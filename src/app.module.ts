@@ -7,8 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [UsersModule, ProductsModule,
-
+  imports: [
     ConfigModule.forRoot({
       isGlobal: true,
     }),
@@ -16,10 +15,15 @@ import { ProductsModule } from './products/products.module';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         uri: configService.get<string>('MONGODB_URI'),
+        dbName: configService.get<string>('MONGODB_DB_NAME'),
+        autoIndex: true,
+        serverSelectionTimeoutMS: 5000,
+        connectTimeoutMS: 10000,
       }),
       inject: [ConfigService],
     }),
-    ProductsModule
+    UsersModule,
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
